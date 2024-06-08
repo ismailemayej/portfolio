@@ -1,7 +1,7 @@
 import Heading from "@/components/main/Heading";
 import BlogCard from "@/components/sub/BlogCard";
 import Link from "next/link";
-const Blogs = async () => {
+const Blogs = async ({ index }: any) => {
   const res = await fetch(
     "https://portfolio-server-six-tau.vercel.app/api/v1/blogs",
     {
@@ -13,8 +13,12 @@ const Blogs = async () => {
   return (
     <>
       <Heading text="Blogs" />
-      <div className="grid relative px-20 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2">
-        {data?.data.slice(0, 3).map((news: { _id: any }): any => (
+      <div
+        key={index}
+        id="blogs"
+        className="grid relative px-6 lg:px-20 lg:grid-cols-4 w-full md:grid-cols-2 grid-cols-1 gap-2"
+      >
+        {data?.data.slice(0, 4).map((news: { _id: any }): any => (
           <BlogCard key={news._id} news={news} />
         ))}
       </div>

@@ -24,13 +24,13 @@ const Projects = async () => {
             livelink: string;
             githublink: string;
             title: string;
-            description: string;
+            overview: string;
           }) => (
             <ProjectCard
               key={project.id}
               src={project.image}
               title={project.title}
-              description={project.description}
+              overview={project.overview}
               livelink={project.livelink}
               githublink={project.githublink}
             />

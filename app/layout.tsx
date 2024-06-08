@@ -5,6 +5,7 @@ import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 const inter = Inter({ subsets: ["latin"] });
+import { NextUIProvider } from "@nextui-org/system";
 
 export const metadata: Metadata = {
   title: "Md Ismaile || Portfolio",
@@ -24,7 +25,7 @@ export default function RootLayout({
         <StarsCanvas />
 
         <Navbar />
-        {children}
+        <NextUIProvider>{children}</NextUIProvider>
         <Footer />
       </body>
     </html>

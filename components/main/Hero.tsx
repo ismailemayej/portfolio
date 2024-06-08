@@ -19,7 +19,7 @@ const Hero = ({ resumelink }: any) => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="grid lg:grid-cols-2 grid-cols-1 items-center justify-center px-20 lg:mt-10 mt-40 w-full z-[20]"
+      className="grid lg:grid-cols-2 grid-cols-1 items-center justify-center px-6 lg:px-20 lg:mt-10 mt-40 w-full z-[20]"
     >
       <div className="h-full mt-[-70px] w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div

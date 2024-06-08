@@ -1,37 +1,37 @@
+import React from "react";
+import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
 import Link from "next/link";
-const BlogCard = ({ news }: any) => {
-  return (
-    <div
-      id="blogs"
-      className="w-[100%] hover:transition-all hover:scale-105 bg-white border border-gray-200 rounded-t-xl shadow dark:bg-gray-800 dark:border-gray-700"
-    >
-      <Link href="#">
-        <img
-          className="rounded-t-xl h-[60%] w-full"
-          src={news.image}
-          alt="product image"
-        />
-      </Link>
-      <div className="px-5 pb-5 h-[30%]">
-        <Link href="#">
-          <h5 className="text-xl font-semibold tracking-tight text-blue-900 dark:text-white">
-            {news.title}
-          </h5>
-        </Link>
-        <span className="text-2 font-bold text-yellow-500 dark:text-white">
-          Category: {news.category}
-        </span>
-        <div className="flex items-center justify-between">
-          <Link
-            href={`/blog/${news._id}`}
-            className="text-white bg-blue-700 absolute bottom-2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-1.5 text-center dark:bg-blue-600  dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            View Details
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
+type TNews = {
+  title: string;
+  image: string;
+  category: string;
+  _id: string;
 };
-
-export default BlogCard;
+export default function BlogCard({ news }: any) {
+  return (
+    <Card className="py-4 w-full">
+      <CardBody className="overflow-visible py-2 ">
+        <Image
+          alt="Card background"
+          className=" rounded-xl w-full h-44"
+          src={news.image}
+          width="100%"
+        />
+      </CardBody>
+      <CardHeader className="pb-0 pt-2 px-4 flex-col justify-between items-start">
+        <div>
+          <h4 className="font-bold text-large">{news.title}</h4>
+          <p className="text-tiny uppercase">Category:{news.category}</p>
+        </div>
+        <div className="flex justify-between">
+          <span>.</span>
+          <Link href={`/blog/${news._id}`}>
+            <button className="bg-green-500 px-4 text-white rounded-xl">
+              Details
+            </button>
+          </Link>{" "}
+        </div>
+      </CardHeader>
+    </Card>
+  );
+}

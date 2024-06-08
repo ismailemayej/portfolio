@@ -4,11 +4,13 @@ import Heading from "./Heading";
 
 const Skills = () => {
   return (
-    <>
+    <div
+      className="flex flex-col items-center justify-center py-20"
+      id="skills"
+    >
       <Heading text="Skills" />
       <section
-        id="skills"
-        className="relative overflow-hidden "
+        className="relative overflow-hidden"
         style={{ transform: "scale(0.9" }}
       >
         <div className="grid lg:grid-cols-12 grid-cols-3 gap-5 mx-auto items-center justify-center">
@@ -24,7 +26,7 @@ const Skills = () => {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
