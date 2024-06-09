@@ -1,15 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight, slideIn } from "@/utils/motion";
-
 import Image from "next/image";
 import Link from "next/link";
 import TypingHeadings from "../TypingHeadings";
 import { TextGenerateEffect } from "../ui/TextGenerateEffect";
-
 import { GraduationCap } from "lucide-react";
-
-import { HoverBorder } from "../ui/HoverButton";
 
 const Hero = ({ resumelink }: any) => {
   const headings = [
@@ -31,7 +27,6 @@ const Hero = ({ resumelink }: any) => {
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-6 mt-6 text-2xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
-          {" "}
           <span className="pb-[-10] text-xl font-semibold">
             I&apos; m Md Ismaile Hossain, {"   "}As a
           </span>
@@ -47,13 +42,12 @@ const Hero = ({ resumelink }: any) => {
           excel in the tech industry. This is my Resume."
         />
 
-        <HoverBorder
-          containerClassName="rounded-xl"
-          as="button"
-          className=" bg-slate-800 text-white dark:text-white flex items-center space-x-2"
+        <motion.a
+          variants={slideInFromLeft(1)}
+          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
         >
           <Link href={resumelink}>Download Resume</Link>
-        </HoverBorder>
+        </motion.a>
         <div
           id="education"
           className="border hover:bg-white bg-slate-900 w-full rounded-xl border-slate-700 p-3"

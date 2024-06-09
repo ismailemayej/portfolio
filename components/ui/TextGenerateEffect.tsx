@@ -12,7 +12,10 @@ export const TextGenerateEffect = ({
 }) => {
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
+
   useEffect(() => {
+    if (!scope.current) return;
+
     animate(
       "span",
       {
@@ -23,7 +26,7 @@ export const TextGenerateEffect = ({
         delay: stagger(0.2),
       }
     );
-  }, [scope.current]);
+  }, [animate, scope]);
 
   const renderWords = () => {
     return (
@@ -42,7 +45,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("text-white", className)}>
       <div className="mt-4">
-        <div className=" dark:text-white text-xl leading-snug tracking-wide">
+        <div className="dark:text-white text-xl leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>
