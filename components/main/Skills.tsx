@@ -4,16 +4,13 @@ import Heading from "./Heading";
 
 const Skills = () => {
   return (
-    <div
-      className="flex flex-col items-center justify-center py-20"
-      id="skills"
-    >
+    <div className="flex flex-col items-center justify-center" id="skills">
       <Heading text="Skills" />
       <section
         className="relative overflow-hidden"
         style={{ transform: "scale(0.9" }}
       >
-        <div className="grid lg:grid-cols-12 grid-cols-3 gap-5 mx-auto items-center justify-center">
+        <div className="grid lg:grid-cols-10 grid-cols-3 gap-2 mx-auto items-center justify-center">
           {Skill_data?.map((item, index: any) => (
             <SkillDataProvider
               key={index}

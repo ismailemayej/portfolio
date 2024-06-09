@@ -1,16 +1,58 @@
+// components/Contact.js
+
 import React from "react";
-import Heading from "./Heading";
+import { Card, Input, Grid, Text } from "@nextui-org/react";
+import { Mail, Phone, Linkedin } from "lucide-react";
+import Link from "next/link";
+
 const Contact = () => {
   return (
-    <div
-      className="flex flex-col items-center justify-center py-20"
-      id="projects"
-    >
-      <Heading text="Contact Us" />
-      <div className="h-full grid z-10 lg:grid-cols-3 grid-cols-1 gap-10 px-10 text-white">
-        Email:ismaile535@gmail.com Mobile:01858226967
-      </div>
-    </div>
+    <Grid.Container gap={2} justify="center">
+      <Grid xs={12} sm={4}>
+        <Card>
+          <Card.Body>
+            <Text h4>Email</Text>
+            <Input
+              contentLeft={<Mail />}
+              initialValue="example@example.com"
+              readOnly
+              fullWidth
+            />
+          </Card.Body>
+        </Card>
+      </Grid>
+      <Grid xs={12} sm={4}>
+        <Card>
+          <Card.Body>
+            <Text h4>Mobile</Text>
+            <Input
+              contentLeft={<Phone />}
+              initialValue="+1234567890"
+              readOnly
+              fullWidth
+            />
+          </Card.Body>
+        </Card>
+      </Grid>
+      <Grid xs={12} sm={4}>
+        <Card>
+          <Card.Body>
+            <Text h4>LinkedIn</Text>
+            <Link
+              href="https://www.linkedin.com/in/your-profile"
+              target="_blank"
+            >
+              <Input
+                contentLeft={<Linkedin />}
+                initialValue="your-profile"
+                readOnly
+                fullWidth
+              />
+            </Link>
+          </Card.Body>
+        </Card>
+      </Grid>
+    </Grid.Container>
   );
 };
 

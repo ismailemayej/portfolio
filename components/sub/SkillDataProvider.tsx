@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
+import { BackgroundGradient } from "../ui/BackgroundGradient";
 
 interface Props {
   src: string;
@@ -31,18 +32,20 @@ const SkillDataProvider = ({
 
   const animationDelay = 0.3;
   return (
-    <motion.div
-      className="mx-auto shadow-xl hover:scale-125 transition delay-150 duration-300 ease-in-out h-36 relative grid-cols-2 border border-gray-600 rounded-xl justify-center p-3 bg-neutral-800"
-      ref={ref}
-      initial="hidden"
-      variants={imageVariants}
-      animate={inView ? "visible" : "hidden"}
-      custom={index}
-      transition={{ delay: index * animationDelay }}
-    >
-      <Image src={src} width={width} height={height} alt="skill image" />
-      <span className=" absolute bottom-0 pb-2 text-white">{skill_name}</span>
-    </motion.div>
+    <BackgroundGradient>
+      <motion.div
+        className="mx-auto shadow-xl hover:scale- hover:bg-neutral-600 items-center transition delay-150 duration-300 ease-in-out h-36 relative grid-cols-2 border border-gray-600 rounded-xl justify-center p-3 bg-neutral-800"
+        ref={ref}
+        initial="hidden"
+        variants={imageVariants}
+        animate={inView ? "visible" : "hidden"}
+        custom={index}
+        transition={{ delay: index * animationDelay }}
+      >
+        <Image src={src} width={width} height={height} alt="skill image" />
+        <span className=" absolute bottom-0 pb-2 text-white">{skill_name}</span>
+      </motion.div>
+    </BackgroundGradient>
   );
 };
 

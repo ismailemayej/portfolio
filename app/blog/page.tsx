@@ -16,20 +16,12 @@ const Blogs = async ({ index }: any) => {
       <div
         key={index}
         id="blogs"
-        className="grid relative px-6 lg:px-20 lg:grid-cols-4 w-full md:grid-cols-2 grid-cols-1 gap-2"
+        className="grid relative px-6 lg:px-20 lg:grid-cols-4 w-full md:grid-cols-2 grid-cols-1 pb-12 gap-2"
       >
         {data?.data.slice(0, 4).map((news: { _id: any }): any => (
           <BlogCard key={news._id} news={news} />
         ))}
       </div>
-      <span>
-        <Link
-          className=" px-20 mt-[-100] rounded-lg bg-slate-900 text-white"
-          href="/"
-        >
-          See all bolg
-        </Link>
-      </span>
     </>
   );
 };
