@@ -7,6 +7,7 @@ type TNews = {
   image: string;
   category: string;
   _id: string;
+  news: TNews;
 };
 export default function BlogCard({ news }: any) {
   return (

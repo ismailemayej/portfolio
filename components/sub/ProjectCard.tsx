@@ -5,6 +5,8 @@ import { CardBody, CardContainer, CardItem } from "../ui/3dCard";
 import { Card, Image } from "@nextui-org/react";
 import { BackgroundGradient } from "../ui/BackgroundGradient";
 import { Github, RadioTower, Target } from "lucide-react";
+import { Tooltip, Button } from "@nextui-org/react";
+import Footer from "../main/Footer";
 
 interface Props {
   src: string;
@@ -32,16 +34,22 @@ const ProjectCard = ({ src, title, livelink, githublink, overview }: Props) => {
               href={livelink}
               passHref
             >
-              <RadioTower />
+              <Tooltip content="Live">
+                <RadioTower />
+              </Tooltip>
             </Link>
             <Link
               className="px-4 rounded-xl py-3 text-white bg-amber-700"
               href={githublink}
               passHref
             >
-              <Github />
+              <Tooltip content="Github">
+                <Github />
+              </Tooltip>
             </Link>
-            <ModalOn title={title} overview={overview} button={<Target />} />
+            <Tooltip content="Overview">
+              <ModalOn title={title} overview={overview} button={<Target />} />
+            </Tooltip>
           </CardItem>
         </CardBody>
       </CardContainer>

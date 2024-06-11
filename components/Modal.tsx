@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import {
   Modal,
   ModalContent,
@@ -30,6 +29,7 @@ export default function ModalOn({ title, overview, button }: any) {
           closeButton: "hover:bg-white/5 active:bg-white/10",
         }}
       >
+        {title}
         <ModalContent>
           {(onClose) => (
             <>

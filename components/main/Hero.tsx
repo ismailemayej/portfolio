@@ -6,7 +6,7 @@ import Link from "next/link";
 import TypingHeadings from "../TypingHeadings";
 import { TextGenerateEffect } from "../ui/TextGenerateEffect";
 import { GraduationCap } from "lucide-react";
-
+import { Tooltip, Button } from "@nextui-org/react";
 const Hero = ({ resumelink }: any) => {
   const headings = [
     "Web Developer",
@@ -23,17 +23,14 @@ const Hero = ({ resumelink }: any) => {
       className="grid lg:grid-cols-2 grid-cols-1 lg:pt-0 pt-28 items-center justify-center w-full z-[20]"
     >
       <div className="h-full mt-[-70px] w-full flex flex-col gap-5 justify-center m-auto text-start">
-        <motion.div
-          variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-2xl font-bold text-white max-w-[600px] w-auto h-auto"
-        >
+        <div className="flex flex-col gap-6 mt-6 text-2xl font-bold text-white max-w-[600px] w-auto h-auto">
           <span className="pb-[-10] text-xl font-semibold">
             I&apos; m Md Ismaile Hossain, {"   "}As a
           </span>
           <motion.div className="" variants={slideIn("", "tween", 0.2, 1)}>
             <TypingHeadings headings={headings} />
           </motion.div>
-        </motion.div>
+        </div>
         <TextGenerateEffect
           className="text-white z-10 "
           words="I am a dedicated technology enthusiast with three years of coding
@@ -44,7 +41,7 @@ const Hero = ({ resumelink }: any) => {
 
         <motion.a
           variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+          className="py-2 button-primary text-center z-10 text-white cursor-pointer rounded-lg max-w-[200px]"
         >
           <Link href={resumelink}>Download Resume</Link>
         </motion.a>
@@ -64,23 +61,19 @@ const Hero = ({ resumelink }: any) => {
             <p className=" text-neutral-300 flex gap-2">
               <GraduationCap />
               Specialized in Information and Communication Technology from the
-              Bangladesh Technical Board.
+              Bangladesh polytechnic institute.
             </p>
           </div>
         </div>
       </div>
-
-      <motion.div
-        variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center"
-      >
-        <Image
-          src="/mainIconsdark.svg"
-          alt="work icons"
-          height={650}
-          width={650}
-        />
-      </motion.div>
+      <Tooltip content="hi, I am a Md Ismaile Hossain">
+        <motion.div
+          variants={slideInFromRight(0.8)}
+          className="w-full h-full flex justify-center items-center"
+        >
+          <Image src="/main.svg" alt="work icons" height={650} width={650} />
+        </motion.div>
+      </Tooltip>
     </motion.div>
   );
 };
