@@ -13,7 +13,7 @@ export default function BlogCard({ news }: any) {
   return (
     <>
       <Card className="py-4 w-full">
-        <CardBody className="overflow-visible py-2 ">
+        <CardBody className="overflow-visible py-2">
           <Image
             alt="Card background"
             className=" rounded-xl w-full h-44"

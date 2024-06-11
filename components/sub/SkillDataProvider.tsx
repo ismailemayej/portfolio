@@ -34,7 +34,7 @@ const SkillDataProvider = ({
   return (
     <BackgroundGradient>
       <motion.div
-        className="mx-auto shadow-xl hover:scale- hover:bg-neutral-600 items-center transition delay-150 duration-300 ease-in-out h-36 relative grid-cols-2 border border-gray-600 rounded-xl justify-center p-3 bg-neutral-800"
+        className="mx-auto shadow-xl hover:scale- hover:bg-neutral-600 items-center transition delay-150 duration-300 ease-in-out h-36 relative grid-cols-2 border border-gray-600 rounded-xl justify-center p-4 bg-neutral-800"
         ref={ref}
         initial="hidden"
         variants={imageVariants}
