@@ -8,7 +8,6 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
-
 export default function ModalOn({ title, overview, button }: any) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -29,22 +28,21 @@ export default function ModalOn({ title, overview, button }: any) {
           closeButton: "hover:bg-white/5 active:bg-white/10",
         }}
       >
-        {title}
         <ModalContent>
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1 text-white">
-                {button}
+                {title}
               </ModalHeader>
               <ModalBody className="text-white">{overview}</ModalBody>
-              <ModalFooter>
+              {/* <ModalFooter>
                 <Button
                   className="bg-[#12042b] hover:shadow-xl text-white shadow-indigo-500/20"
                   onPress={onClose}
                 >
                   close
                 </Button>
-              </ModalFooter>
+              </ModalFooter> */}
             </>
           )}
         </ModalContent>

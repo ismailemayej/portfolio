@@ -9,12 +9,25 @@ const BlogDateils = async ({ params }: any) => {
     }
   );
   const data = await res.json();
+
+  const stripHtmlTags = (html: string) => {
+    return html.replace(/<\/?[^>]+(>|$)/g, "");
+  };
+
+  const cleanDetails = stripHtmlTags(data.details);
+
   return (
     <>
-      <div className="text-white lg:mt-40 mt-20 px-20 mx-auto">
-        <Image src={data.image} width={300} height={300} alt={data.title} />
-        Title:{data.title}
-        <div className="  border  rounded-xl p-3">{data.details}</div>
+      <div className="text-white lg:mt-10  py-20 px-20 mx-auto">
+        <Image
+          className="rounded-xl"
+          src={data.image}
+          width={300}
+          height={300}
+          alt={data.title}
+        />
+        <div className="mt-4 text-2xl font-bold">{data.title}</div>
+        <div className="border rounded-xl p-3 mt-4">{cleanDetails}</div>
       </div>
     </>
   );

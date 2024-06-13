@@ -1,5 +1,4 @@
 import Projects from "@/components/home/projects/Projects";
-import Navbar from "@/components/main/Navbar";
 import Skills from "@/components/main/Skills";
 import HeroContent from "@/components/sub/HeroContent";
 import Blogs from "./blog/page";
