@@ -11,9 +11,9 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <div className="mx-auto lg:pb-12 pb-6 w-1/2">
+    <div>
       <Heading text="Contact" />
-      <div className="grid lg:grid-cols-6 grid-cols-3 gap-6 justify-center">
+      <div className="grid lg:grid-cols-5 lg:pb-12 pb-6 mx-auto grid-cols-3 lg:px-28 lg:gap-6 gap-4 justify-center">
         <Tooltip content="Sent Email">
           <ModalOn
             title="Sent Email"
@@ -23,7 +23,7 @@ const Contact = () => {
         </Tooltip>
 
         <ModalOn
-          title="Copy mobile number"
+          title="Call me any time"
           overview={
             <Tooltip content="Call me">
               <Snippet className="bg-white text-black text-lg">
@@ -35,7 +35,7 @@ const Contact = () => {
         />
         <Tooltip content="My Linkedin Profile">
           <ModalOn
-            title="Copy mobile number"
+            title="My Linkedin Profile"
             overview={
               <LinkPreview
                 url="https://www.linkedin.com/in/ismailemayej/"
@@ -49,7 +49,7 @@ const Contact = () => {
         </Tooltip>
         <Tooltip content="My Github Profile">
           <ModalOn
-            title="Copy mobile number"
+            title="MY Github Profile"
             overview={
               <LinkPreview
                 url="https://github.com/ismailemayej"

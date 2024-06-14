@@ -18,7 +18,7 @@ const BlogDateils = async ({ params }: any) => {
 
   return (
     <>
-      <div className="text-white lg:mt-10  py-20 px-20 mx-auto">
+      <div className="text-white lg:mt-10  py-20 lg:px-20 mx-auto">
         <Image
           className="rounded-xl"
           src={data.image}

@@ -28,13 +28,13 @@ export default function BlogCard({ news }: { news: TNews }) {
         </CardBody>
         <CardHeader className="pb-0 pt-2 h-full px-4 flex-col justify-between items-start">
           <div>
-            <span className="text-xs uppercase text-white rounded-lg bg-green-500 p-1">
+            <span className="text-xs uppercase text-white rounded-lg bg-green-500 py-1 px-2">
               {news.category}
             </span>
-            <h4 className="font-semibold mt-2 text-md">{news.title}</h4>
-            <span>{datadetails.slice(0, 50)}...</span>
+            <h4 className="font-semibold mt-2 text-lg">{news.title}</h4>
+            <span className="">{datadetails.slice(0, 30)}</span>
           </div>
-          <div className="flex justify-end absolute bottom-1">
+          <div className="flex justify-end absolute bottom-2 w-full right-4">
             <Link href={`/blog/${news._id}`}>
               <button className="bg-blue-500 py-1 px-6 translate-x-2 text-white rounded-md">
                 Details
