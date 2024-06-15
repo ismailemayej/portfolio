@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -12,6 +11,7 @@ interface Props {
   height: number;
   index: number;
   skill_name: string;
+  skillpercentage: number;
 }
 
 const SkillDataProvider = ({
@@ -19,6 +19,7 @@ const SkillDataProvider = ({
   width,
   height,
   skill_name,
+  skillpercentage,
   index,
 }: Props) => {
   const { ref, inView } = useInView({
@@ -30,11 +31,11 @@ const SkillDataProvider = ({
     visible: { opacity: 1 },
   };
 
-  const animationDelay = 0.3;
+  const animationDelay = 0.5;
   return (
     <BackgroundGradient>
       <motion.div
-        className="mx-auto shadow-xl hover:scale- hover:bg-neutral-600 items-center transition delay-150 duration-300 ease-in-out h-36 relative grid-cols-2 border border-gray-600 rounded-xl justify-center p-4 bg-neutral-800"
+        className="w-full align-middle flex mx-auto shadow-xl transition-all delay-150 duration-300 ease-in-out h-56 justify-center p-4 bg-slate-900 border-2 border-teal-950 rounded-xl relative "
         ref={ref}
         initial="hidden"
         variants={imageVariants}
@@ -42,8 +43,25 @@ const SkillDataProvider = ({
         custom={index}
         transition={{ delay: index * animationDelay }}
       >
-        <Image src={src} width={width} height={height} alt="skill image" />
-        <span className=" absolute bottom-0 pb-2 text-white">{skill_name}</span>
+        <div
+          className="radial-progress text-primary my-2 hover:bg-blue-300"
+          style={
+            {
+              "--value": skillpercentage,
+              "--size": "8rem",
+              "--thickness": "0.5rem",
+            } as React.CSSProperties
+          }
+          role="progressbar"
+        >
+          <Image src={src} width={width} height={height} alt="skill image" />
+        </div>
+        <div className=" absolute bottom-0 mt-2 py-2 rounded-b-xl flex w-full items-center px-2 bg-slate-500">
+          <span className="w-[75%] items-center text-white">{skill_name}</span>
+          <div className="w-[25%] bg-zinc-300 font-semibold text-black p-2 text-xs rounded-full">
+            {skillpercentage}%
+          </div>
+        </div>
       </motion.div>
     </BackgroundGradient>
   );

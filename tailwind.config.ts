@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import daisyui from "daisyui";
 const { nextui } = require("@nextui-org/theme");
 const {
   default: flattenColorPalette,
@@ -24,7 +25,7 @@ const config: Config = {
   },
   darkMode: "class",
 
-  plugins: [addVariablesForColors, nextui()],
+  plugins: [addVariablesForColors, nextui(), daisyui],
 };
 export default config;
 

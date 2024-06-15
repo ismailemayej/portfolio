@@ -13,7 +13,10 @@ const Contact = () => {
   return (
     <div>
       <Heading text="Contact" />
-      <div className="grid lg:grid-cols-5 lg:pb-12 pb-6 mx-auto grid-cols-3 lg:px-28 lg:gap-6 gap-4 justify-center">
+      <div
+        id="contact"
+        className="grid lg:grid-cols-5 lg:pb-12 pb-6 mx-auto grid-cols-3 lg:px-28 lg:gap-6 gap-4 justify-center"
+      >
         <Tooltip content="Sent Email">
           <ModalOn
             title="Sent Email"
