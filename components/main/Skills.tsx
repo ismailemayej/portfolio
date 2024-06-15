@@ -18,7 +18,7 @@ const Skills = async () => {
         className="relative overflow-hidden"
         style={{ transform: "scale(0.9" }}
       >
-        <div className="grid lg:grid-cols-6 grid-cols-2 lg:gap-4 gap-2 items-center justify-center">
+        <div className="grid lg:grid-cols-7 grid-cols-2 lg:gap-4 gap-2 items-center justify-center">
           {Skill_data?.data?.map(
             (
               item: {
@@ -32,8 +32,8 @@ const Skills = async () => {
               <SkillDataProvider
                 key={item._id}
                 src={item.skilllogo}
-                width={70}
-                height={50}
+                width={60}
+                height={40}
                 skill_name={item.skillname}
                 skillpercentage={item.skillpercentage}
                 index={index}

@@ -35,7 +35,7 @@ const SkillDataProvider = ({
   return (
     <BackgroundGradient>
       <motion.div
-        className="w-full align-middle flex mx-auto shadow-xl transition-all delay-150 duration-300 ease-in-out h-56 justify-center p-4 bg-slate-900 border-2 border-teal-950 rounded-xl relative "
+        className="w-full align-middle flex mx-auto shadow-xl transition-all delay-150 duration-300 ease-in-out h-48 justify-center p-4 bg-slate-900 border-2 border-teal-950 rounded-xl relative "
         ref={ref}
         initial="hidden"
         variants={imageVariants}
@@ -48,7 +48,7 @@ const SkillDataProvider = ({
           style={
             {
               "--value": skillpercentage,
-              "--size": "8rem",
+              "--size": "6rem",
               "--thickness": "0.5rem",
             } as React.CSSProperties
           }
