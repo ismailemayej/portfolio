@@ -57,8 +57,8 @@ const SkillDataProvider = ({
           <Image src={src} width={width} height={height} alt="skill image" />
         </div>
         <div className=" absolute bottom-0 mt-2 py-2 rounded-b-xl flex w-full items-center px-2 bg-slate-500">
-          <span className="w-[75%] items-center text-white">{skill_name}</span>
-          <div className="w-[25%] bg-zinc-300 font-semibold text-black p-2 text-xs rounded-full">
+          <span className="w-[65%] items-center text-white">{skill_name}</span>
+          <div className="w-[25%] flex justify-center items-center bg-zinc-300 font-semibold text-black p-3 text-xs rounded-full">
             {skillpercentage}%
           </div>
         </div>
