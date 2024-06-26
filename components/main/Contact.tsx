@@ -22,6 +22,7 @@ const Contact = () => {
             title="Sent Email"
             overview={<Email />}
             button={<MailOpen />}
+            className=""
           />
         </Tooltip>
 
@@ -39,6 +40,7 @@ const Contact = () => {
         <Tooltip content="My Linkedin Profile">
           <ModalOn
             title="My Linkedin Profile"
+            className=""
             overview={
               <LinkPreview
                 url="https://www.linkedin.com/in/ismailemayej/"
@@ -53,6 +55,7 @@ const Contact = () => {
         <Tooltip content="My Github Profile">
           <ModalOn
             title="MY Github Profile"
+            className=""
             overview={
               <LinkPreview
                 url="https://github.com/ismailemayej"
@@ -67,6 +70,7 @@ const Contact = () => {
         <Tooltip content="My Github Profile">
           <ModalOn
             title="Name: Md Ismaile Hossain"
+            className=""
             overview={
               <Snippet className="bg-white text-black text-lg">
                 +8801858226967

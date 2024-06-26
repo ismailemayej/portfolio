@@ -16,7 +16,7 @@ const Projects = async () => {
       id="projects"
     >
       <Heading text="Projects" />
-      <div className="h-full grid lg:grid-cols-3 grid-cols-1 gap-12 lg:px-10">
+      <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-12 lg:px-10 px-0">
         {data?.data.map(
           (project: {
             image: string;

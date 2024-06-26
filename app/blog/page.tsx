@@ -16,7 +16,7 @@ const Blogs = async () => {
       <Heading text="Blogs" />
       <div
         id="blogs"
-        className="grid relative px-2 lg:px-20 lg:grid-cols-4 w-full md:grid-cols-2 grid-cols-1 pb-12 gap-2"
+        className="grid relative px-2 lg:grid-cols-4 w-[100%] md:grid-cols-2 grid-cols-1 pb-12 gap-2"
       >
         {data?.data.slice(0, 4).map((news: any) => (
           <BlogCard key={news._id} news={news} />

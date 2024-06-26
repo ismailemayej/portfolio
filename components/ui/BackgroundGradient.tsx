@@ -51,7 +51,7 @@ export const BackgroundGradient = ({
         transition={
           animate
             ? {
-                duration: 5,
+                duration: 3,
                 repeat: Infinity,
                 repeatType: "reverse",
               }

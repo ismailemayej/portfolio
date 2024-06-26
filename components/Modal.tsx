@@ -4,16 +4,17 @@ import {
   ModalContent,
   ModalHeader,
   ModalBody,
-  ModalFooter,
   Button,
   useDisclosure,
 } from "@nextui-org/react";
-export default function ModalOn({ title, overview, button }: any) {
+export default function ModalOn({ title, overview, button, className }: any) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
     <>
-      <Button onPress={onOpen}>{button}</Button>
+      <Button className={className} onPress={onOpen}>
+        {button}
+      </Button>
       <Modal
         backdrop="opaque"
         isOpen={isOpen}
@@ -35,14 +36,6 @@ export default function ModalOn({ title, overview, button }: any) {
                 {title}
               </ModalHeader>
               <ModalBody className="text-white">{overview}</ModalBody>
-              {/* <ModalFooter>
-                <Button
-                  className="bg-[#12042b] hover:shadow-xl text-white shadow-indigo-500/20"
-                  onPress={onClose}
-                >
-                  close
-                </Button>
-              </ModalFooter> */}
             </>
           )}
         </ModalContent>

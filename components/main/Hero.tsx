@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TypingHeadings from "../TypingHeadings";
 import { TextGenerateEffect } from "../ui/TextGenerateEffect";
-import { GraduationCap } from "lucide-react";
+import { ArrowBigDownDash, GraduationCap } from "lucide-react";
 import { Tooltip, Button } from "@nextui-org/react";
 const Hero = ({ resumelink }: any) => {
   const headings = [
@@ -41,9 +41,13 @@ const Hero = ({ resumelink }: any) => {
 
         <motion.a
           variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center z-10 text-white cursor-pointer rounded-lg max-w-[200px]"
+          className="py-2 button-primary text-center z-10 text-white cursor-pointer rounded-lg max-w-[185px]"
         >
-          <Link href={resumelink}>Download Resume</Link>
+          {" "}
+          <span className="flex justify-between items-center px-2 gap-1">
+            <ArrowBigDownDash />
+            <Link href={resumelink}>Download Resume</Link>
+          </span>
         </motion.a>
         <div
           id="education"
