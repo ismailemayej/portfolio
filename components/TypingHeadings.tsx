@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 import usePreviousState from "./usePreviousState";
 
-const typingSpeed = 0.5;
+const typingSpeed = 0.15;
 const deleteSpeed = 0.1;
 const delayBeforeDelete = 1.1;
 

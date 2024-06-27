@@ -18,7 +18,7 @@ const Skills = async () => {
         className="relative overflow-hidden"
         style={{ transform: "scale(0.9" }}
       >
-        <div className="grid lg:grid-cols-6 grid-cols-2 lg:gap-4 gap-2 items-center justify-center">
+        <div className="grid w-full lg:grid-cols-6 grid-cols-2 lg:gap-4 gap-2 items-center justify-center">
           {Skill_data?.data?.map(
             (
               item: {

@@ -11,82 +11,74 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <div>
+    <div id="contact">
       <Heading text="Contact" />
-      <div
-        id="contact"
-        className="grid lg:grid-cols-5 lg:pb-12 pb-6 mx-auto grid-cols-3 lg:px-28 lg:gap-6 gap-4 justify-center"
-      >
-        <Tooltip content="Sent Email">
-          <ModalOn
-            title="Sent Email"
-            overview={<Email />}
-            button={<MailOpen />}
-            className=""
-          />
-        </Tooltip>
 
-        <ModalOn
-          title="Call me any time"
-          overview={
-            <Tooltip content="Call me">
-              <Snippet className="bg-white text-black text-lg">
-                +8801858226967
-              </Snippet>
-            </Tooltip>
-          }
-          button={<PhoneMissed />}
-        />
-        <Tooltip content="My Linkedin Profile">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
+        <Email />
+        <div className="flex gap-2">
           <ModalOn
-            title="My Linkedin Profile"
-            className=""
+            title="Call me any time"
             overview={
-              <LinkPreview
-                url="https://www.linkedin.com/in/ismailemayej/"
-                className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
-              >
-                Linkedin
-              </LinkPreview>
+              <Tooltip content="Call me">
+                <Snippet className="bg-white text-black text-lg">
+                  +8801858226967
+                </Snippet>
+              </Tooltip>
             }
-            button={<LinkedinIcon />}
+            button={<PhoneMissed />}
           />
-        </Tooltip>
-        <Tooltip content="My Github Profile">
-          <ModalOn
-            title="MY Github Profile"
-            className=""
-            overview={
-              <LinkPreview
-                url="https://github.com/ismailemayej"
-                className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
-              >
-                Github
-              </LinkPreview>
-            }
-            button={<GithubIcon />}
-          />
-        </Tooltip>
-        <Tooltip content="My Github Profile">
-          <ModalOn
-            title="Name: Md Ismaile Hossain"
-            className=""
-            overview={
-              <Snippet className="bg-white text-black text-lg">
-                +8801858226967
-              </Snippet>
-            }
-            button={
-              <Image
-                className="p-1"
-                src={whatsapp}
-                alt="whtasapp icon"
-                width={40}
-                height={40}
-              />
-            }
-          />
-        </Tooltip>
+          <Tooltip content="My Linkedin Profile">
+            <ModalOn
+              title="My Linkedin Profile"
+              className=""
+              overview={
+                <LinkPreview
+                  url="https://www.linkedin.com/in/ismailemayej/"
+                  className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
+                >
+                  Linkedin
+                </LinkPreview>
+              }
+              button={<LinkedinIcon />}
+            />
+          </Tooltip>
+          <Tooltip content="My Github Profile">
+            <ModalOn
+              title="MY Github Profile"
+              className=""
+              overview={
+                <LinkPreview
+                  url="https://github.com/ismailemayej"
+                  className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
+                >
+                  Github
+                </LinkPreview>
+              }
+              button={<GithubIcon />}
+            />
+          </Tooltip>
+          <Tooltip content="My Github Profile">
+            <ModalOn
+              title="Name: Md Ismaile Hossain"
+              className=""
+              overview={
+                <Snippet className="bg-white text-black text-lg">
+                  +8801858226967
+                </Snippet>
+              }
+              button={
+                <Image
+                  className="p-1"
+                  src={whatsapp}
+                  alt="whtasapp icon"
+                  width={40}
+                  height={40}
+                />
+              }
+            />
+          </Tooltip>
+        </div>
       </div>
     </div>
   );

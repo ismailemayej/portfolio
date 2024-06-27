@@ -1,6 +1,5 @@
 import Navbar from "@/components/main/Navbar";
 import Image from "next/image";
-
 const BlogDateils = async ({ params }: any) => {
   const res = await fetch(
     `https://portfolio-server-six-tau.vercel.app/api/v1/blogs/${params.blogId}`,
@@ -17,22 +16,25 @@ const BlogDateils = async ({ params }: any) => {
   const cleanDetails = stripHtmlTags(data.details);
 
   return (
-    <>
-      <div className="text-white lg:mt-10  py-20 lg:px-20 mx-auto">
+    <div className="lg:pt-20 pt-2 lg:pb-20 z-20">
+      <div className="text-white border rounded-xl p-3  lg:px-8 mx-auto">
+        <div className="mt-4 lg:text-3xl text-2xl pb-2  items-start font-bold">
+          {data.title}
+        </div>
         <Image
-          className="rounded-xl mx-auto"
+          className="rounded-xl"
           src={data.image}
-          width={350}
-          height={350}
+          width={750}
+          height={550}
           alt={data.title}
         />
-        <span className=" bg-slate-700 text-white px-2 py-1 text-xs mt-3 rounded-lg">
+        <span className=" bg-yellow-300 text-black px-2 py-1 text-xs mt-6 rounded-lg">
           {data.category}
         </span>
-        <div className="mt-4 text-2xl font-bold">{data.title}</div>
-        <div className="border rounded-xl p-3 mt-4">{cleanDetails}</div>
+
+        <div className="mt-4">{cleanDetails}</div>
       </div>
-    </>
+    </div>
   );
 };
 

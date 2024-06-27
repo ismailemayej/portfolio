@@ -2,11 +2,9 @@
 import Link from "next/link";
 import ModalOn from "../Modal";
 import { CardBody, CardContainer, CardItem } from "../ui/3dCard";
-import { Card, Image } from "@nextui-org/react";
-import { BackgroundGradient } from "../ui/BackgroundGradient";
+import { Image } from "@nextui-org/react";
 import { Github, RadioTower, ReceiptText } from "lucide-react";
 import { Tooltip, Button } from "@nextui-org/react";
-import Footer from "../main/Footer";
 
 interface Props {
   src: string;
@@ -18,17 +16,11 @@ interface Props {
 
 const ProjectCard = ({ src, title, livelink, githublink, overview }: Props) => {
   return (
-    <CardContainer className="inter-var relative w-full lg:mx-1">
-      <BackgroundGradient>
-        <CardBody className=" bg-slate-900 h-80   dark:hover:shadow-2xl border-slate-700 rounded-xl p-3 ">
-          <CardItem translateZ="100" className="">
-            <Image alt={title} className=" rounded-xl w-96 h-60" src={src} />
-          </CardItem>
-
-          <CardItem
-            translateZ={20}
-            className="px-4 pt-2 rounded-xl absolute bottom-2 flex flex-row items-center gap-4 text-xs font-normal dark:text-white"
-          >
+    <CardContainer>
+      <CardItem translateZ={30}>
+        <CardBody className=" bg-slate-900 h-96 max-w-fit p-2  dark:hover:shadow-2xl border-slate-700 rounded-xl my-2">
+          <Image alt={title} className=" rounded-xl w-96 h-80" src={src} />
+          <div className="px-4 pt-2 rounded-xl absolute bottom-2 flex flex-row items-center gap-4 text-xs font-normal bg-slate-900 dark:text-white">
             <Link
               className="px-4 rounded-xl py-2 text-white bg-slate-600"
               href={livelink}
@@ -55,9 +47,9 @@ const ProjectCard = ({ src, title, livelink, githublink, overview }: Props) => {
                 button="overview"
               />
             </Tooltip>
-          </CardItem>
+          </div>
         </CardBody>
-      </BackgroundGradient>
+      </CardItem>
     </CardContainer>
   );
 };
