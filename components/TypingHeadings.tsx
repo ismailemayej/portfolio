@@ -5,7 +5,6 @@ import usePreviousState from "./usePreviousState";
 const typingSpeed = 0.15;
 const deleteSpeed = 0.1;
 const delayBeforeDelete = 1.1;
-
 const headingVariants = {
   visible: {
     transition: {
