@@ -21,15 +21,15 @@ const Blogs = async () => {
         {data?.data?.map((news: any) => (
           <BlogCard key={news._id} news={news} />
         ))}
+        <span className="flex">
+          <Link
+            className="bg-red-600 px-3 text-white py-1 rounded-xl"
+            href="/allblog"
+          >
+            See all blog
+          </Link>
+        </span>
       </div>
-      <span className="flex justify-end w-full">
-        <Link
-          className="  bg-red-600 px-3 text-white py-1 rounded-xl"
-          href="/allblog"
-        >
-          See all blog
-        </Link>
-      </span>
     </div>
   );
 };
