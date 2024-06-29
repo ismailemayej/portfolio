@@ -49,7 +49,7 @@ const Email = () => {
   return (
     <div className="w-full">
       <form ref={form} onSubmit={handleSubmit(onSubmit)} className="mx-auto">
-        <div className="flex gap-2">
+        <div className="lg:flex gap-2">
           <Input
             isRequired
             color="warning"
@@ -68,7 +68,7 @@ const Email = () => {
           />
         </div>
 
-        <div className="flex gap-2">
+        <div className="lg:flex gap-2">
           <Input
             isRequired
             type="email"
