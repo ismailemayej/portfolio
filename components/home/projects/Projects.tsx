@@ -11,12 +11,9 @@ const Projects = async () => {
   const data = await res.json();
 
   return (
-    <div
-      className="flex flex-col items-center justify-center py-12"
-      id="projects"
-    >
+    <div id="projects" className="rounded-lg w-full bg-slate-900 p-2">
       <Heading text="Projects" />
-      <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-12 lg:px-10 px-0">
+      <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-4 gap-2">
         {data?.data.map(
           (project: {
             image: string;

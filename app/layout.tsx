@@ -7,6 +7,7 @@ import Footer from "@/components/main/Footer";
 const inter = Inter({ subsets: ["latin"] });
 import { NextUIProvider } from "@nextui-org/system";
 import Container from "@/components/main/Container";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Md Ismaile || Portfolio",
@@ -26,6 +27,7 @@ export default function RootLayout({
       >
         <StarsCanvas />
         <Navbar />
+        <Toaster />
         <NextUIProvider>
           <Container className="">{children}</Container>
         </NextUIProvider>

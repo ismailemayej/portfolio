@@ -11,12 +11,12 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <div id="contact">
-      <Heading text="Contact" />
+    <div id="contact" className=" bg-slate-900 rounded-lg py-6  px-4 lg:px-16">
+      <Heading text="Get in Touch" />
 
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
+      <div className="my-4">
         <Email />
-        <div className="flex gap-2">
+        <div className="flex gap-2 w-full justify-center mt-8">
           <ModalOn
             title="Call me any time"
             overview={

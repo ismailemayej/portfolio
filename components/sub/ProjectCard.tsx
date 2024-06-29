@@ -16,9 +16,9 @@ interface Props {
 
 const ProjectCard = ({ src, title, livelink, githublink, overview }: Props) => {
   return (
-    <CardContainer>
+    <CardContainer className="w-full">
       <CardItem translateZ={30}>
-        <CardBody className=" bg-slate-900 h-96 max-w-fit p-2  dark:hover:shadow-2xl border-slate-700 rounded-xl my-2">
+        <CardBody className=" bg-slate-900 h-96 max-w-fit p-2  dark:hover:shadow-2xl border-slate-700 rounded-xl">
           <Image alt={title} className=" rounded-xl w-96 h-80" src={src} />
           <div className="px-4 pt-2 rounded-xl absolute bottom-2 flex flex-row items-center gap-4 text-xs font-normal bg-slate-900 dark:text-white">
             <Link

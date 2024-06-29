@@ -3,15 +3,21 @@ import { Button, Input, Textarea } from "@nextui-org/react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import { toast } from "sonner";
 
 type Inputs = {
+  first_name: string;
+  lastname: string;
   email: string;
-  name: string;
+  phone: string;
   message: string;
   subject: string;
 };
 
 const Email = () => {
+  const handleToast = () => {
+    toast.success("Message sent successfully");
+  };
   const form = useRef<HTMLFormElement | null>(null);
   const {
     register,
@@ -30,6 +36,7 @@ const Email = () => {
         )
         .then(
           () => {
+            console.log(form.current);
             console.log("SUCCESS!");
           },
           (error) => {
@@ -42,23 +49,41 @@ const Email = () => {
   return (
     <div className="w-full">
       <form ref={form} onSubmit={handleSubmit(onSubmit)} className="mx-auto">
-        <Input
-          isRequired
-          type="text"
-          label="Your full name"
-          className="max-w-full mb-3"
-          {...register("name", { required: true })}
-        />
-        {errors.name && <span>Name is required</span>}
+        <div className="flex gap-2">
+          <Input
+            isRequired
+            color="warning"
+            type="text"
+            label="Your first name"
+            className="max-w-full mb-3"
+            {...register("first_name", { required: true })}
+          />
+          {errors.first_name && <span>first Name is required</span>}
+          <Input
+            color="warning"
+            type="text"
+            label="Your last name"
+            className="max-w-full mb-3"
+            {...register("lastname", { required: true })}
+          />
+        </div>
 
-        <Input
-          isRequired
-          type="email"
-          label="Email"
-          className="max-w-full mb-3"
-          {...register("email", { required: true })}
-        />
-        {errors.email && <span>Email is required</span>}
+        <div className="flex gap-2">
+          <Input
+            isRequired
+            type="email"
+            label="Email"
+            className="max-w-full mb-3"
+            {...register("email", { required: true })}
+          />
+          {errors.email && <span>Email is required</span>}
+          <Input
+            type="text"
+            label="phone"
+            className="max-w-full mb-3"
+            {...register("phone", { required: true })}
+          />
+        </div>
 
         <Input
           isRequired
@@ -71,6 +96,7 @@ const Email = () => {
 
         <Textarea
           isRequired
+          color="secondary"
           type="text"
           className="max-w-full mb-3"
           label="Your Message"
@@ -79,7 +105,12 @@ const Email = () => {
         {errors.message && <span>Message is required</span>}
 
         <span className="flex justify-center items-center">
-          <Button color="primary" className="mx-auto w-2/4" type="submit">
+          <Button
+            onClick={handleToast}
+            color="primary"
+            className="mx-auto w-1/4"
+            type="submit"
+          >
             Send
           </Button>
         </span>
