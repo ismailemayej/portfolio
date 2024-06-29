@@ -73,7 +73,7 @@ const Hero = ({ resumelink }: any) => {
       <Tooltip content="hi, I am a Md Ismaile Hossain">
         <motion.div
           variants={slideInFromRight(0.8)}
-          className="w-full h-full flex justify-center items-center"
+          className="w-full flex justify-center items-center"
         >
           <Image src="/main.svg" alt="work icons" height={650} width={650} />
         </motion.div>

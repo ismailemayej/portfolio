@@ -12,12 +12,9 @@ const Skills = async () => {
   const Skill_data = await res.json();
 
   return (
-    <div className="lg:my-6 my-3 bg-slate-900 rounded-lg" id="skills">
+    <div className=" bg-slate-900 rounded-lg lg:my-6 my-3 p-3" id="skills">
       <Heading text="Skills" />
-      <section
-        className="relative overflow-hidden"
-        style={{ transform: "scale(0.9" }}
-      >
+      <section className="relative overflow-hidden">
         <div className="w-[100%] grid lg:grid-cols-6 grid-cols-2 lg:gap-2 gap-2 items-center">
           {Skill_data?.data?.map(
             (
