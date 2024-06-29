@@ -90,9 +90,9 @@ const Navbar = () => {
   return (
     <div
       id=""
-      className="w-full h-[65px] fixed lg:top-0 justify-center  bottom-0 left-0 shadow-lg shadow-[#2A0E61]/50 bg-[#110d2b38] backdrop-blur-lg z-50 lg:px-10"
+      className=" w-screen lg:w-full h-[65px] fixed lg:top-0 justify-center  bottom-0 left-0 shadow-lg shadow-[#2A0E61]/50 bg-[#110d2b38] backdrop-blur-lg z-50 lg:px-10"
     >
-      <div className="w-full h-full flex flex-row items-center justify-center m-auto px-[1px]">
+      <div className="w-screen h-full flex flex-row items-center justify-center m-auto px-[1px]">
         <div className="w-[750px] h-full flex flex-row items-center justify-between md:mr-20">
           <div className="flex text-sm lg:text-lg items-center justify-between w-full h-auto border border-[#7042f861] lg:bg-[#15101f9d] bg-[#24103dfb]  mr-[15px] px-[20px] py-[10px] lg:rounded-full text-gray-200">
             {menu.map((item, index) => (
