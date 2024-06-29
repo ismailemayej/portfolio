@@ -12,7 +12,7 @@ import Image from "next/image";
 const Contact = () => {
   return (
     <div id="contact" className=" bg-slate-900 rounded-lg py-6  px-4 lg:px-16">
-      <Heading text="Get in Touch" />
+      <Heading text="Contact" />
 
       <div className="my-4">
         <Email />
