@@ -31,7 +31,7 @@ const SkillDataProvider = ({
     visible: { opacity: 1 },
   };
 
-  const animationDelay = 0.5;
+  const animationDelay = 0.2;
   return (
     <motion.div
       className="w-full align-middle flex mx-auto shadow-xl transition-all delay-150 duration-300 ease-in-out h-48 justify-center p-4 bg-slate-800 border-2 border-teal-950 rounded-xl relative "
