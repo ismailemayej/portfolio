@@ -6,12 +6,13 @@ import Link from "next/link";
 import TypingHeadings from "../TypingHeadings";
 import { TextGenerateEffect } from "../ui/TextGenerateEffect";
 import { ArrowBigDownDash, GraduationCap } from "lucide-react";
-import { Tooltip, Button } from "@nextui-org/react";
+import { Tooltip } from "@nextui-org/react";
 const Hero = ({ resumelink }: any) => {
   const headings = [
-    "Web Developer",
-    "Programmer",
+    "FrontEnd Developer",
     "MERN Stack Developer",
+    "Programmer",
+    "Web Developer",
     "Problem solver",
     "JavaScript Developer",
     "Passionate Learner",
@@ -25,7 +26,7 @@ const Hero = ({ resumelink }: any) => {
       <div className="h-full mt-[-70px] w-full flex flex-col gap-5 justify-center m-auto text-start">
         <div className="flex flex-col gap-6 mt-6 text-2xl font-bold text-white max-w-[600px] w-auto h-auto">
           <span className="pb-[-10] text-xl font-semibold">
-            I&apos; m Md Ismaile Hossain, {"   "}As a
+            I&apos; m Md Ismaile Hossain, As a
           </span>
           <motion.div className="" variants={slideIn("", "tween", 0.2, 1)}>
             <TypingHeadings headings={headings} />

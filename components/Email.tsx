@@ -4,7 +4,6 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import { toast } from "sonner";
-
 type Inputs = {
   first_name: string;
   lastname: string;
@@ -103,7 +102,6 @@ const Email = () => {
           {...register("message", { required: true })}
         />
         {errors.message && <span>Message is required</span>}
-
         <span className="flex justify-center items-center">
           <Button
             onClick={handleToast}
